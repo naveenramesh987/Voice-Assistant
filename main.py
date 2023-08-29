@@ -6,7 +6,7 @@ engine = pyttsx3.init()
 
 def voice_assistant():
     with sr.Microphone() as source:
-        print("Listening... Speak something:")
+        print("Listening... Say something:")
         audio = recognizer.listen(source)
 
         try:
@@ -26,7 +26,7 @@ def voice_assistant():
             engine.runAndWait()
 
         except sr.UnknownValueError:
-            print("Sorry, I could not understand audio.")
+            print("Sorry, I could not understand the audio.")
         except sr.RequestError as e:
             print("Could not request results from Google Speech Recognition service; {0}".format(e))
 
